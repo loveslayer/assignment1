@@ -1,0 +1,48 @@
+import turtle
+
+# 创建画布
+screen = turtle.Screen()
+screen.title("Simple Umbrella Drawing")
+screen.bgcolor("sky blue")
+
+# 创建画笔对象
+pen = turtle.Turtle()
+pen.speed(5)  # 设置画笔速度
+
+# 画雨伞的伞面
+pen.penup()
+pen.goto(0, -50)
+pen.pendown()
+pen.color("red")
+pen.begin_fill()
+pen.circle(100, 180)  # 画半圆作为伞面
+pen.end_fill()
+
+# 画雨伞的伞骨
+pen.right(90)
+pen.forward(150)
+
+# 画雨伞的伞柄
+pen.backward(150)
+pen.right(180)
+pen.color("black")
+pen.pensize(4)
+pen.forward(150)
+
+# 画伞面上的小分隔线
+pen.pensize(1)
+pen.penup()
+pen.goto(0, -50)
+pen.pendown()
+pen.left(90)
+pen.forward(100)
+pen.backward(100)
+pen.left(30)
+pen.forward(100)
+pen.backward(100)
+pen.right(60)
+pen.forward(100)
+pen.hideturtle()
+
+# 完成绘图，关闭画布
+screen.mainloop()
